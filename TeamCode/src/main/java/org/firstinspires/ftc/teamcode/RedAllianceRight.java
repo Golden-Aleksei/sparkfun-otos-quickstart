@@ -30,47 +30,49 @@ public class RedAllianceRight extends LinearOpMode {
         mot6.setDirection(DcMotorSimple.Direction.REVERSE);
         vipside.setDirection(DcMotorSimple.Direction.REVERSE);
 
-        PinpointDrive drive = new PinpointDrive(hardwareMap, new Pose2d(-60, 8.5, Math.toRadians(90)));
+        PinpointDrive drive = new PinpointDrive(hardwareMap, new Pose2d(8.5, -60, Math.toRadians(90)));
 
         int x = 90;
         waitForStart();
         if (isStopRequested()) return;
         //while loop for stuff
         mot6.setTargetPosition(0);
+        vipmain.setTargetPosition(0);
 
         // Autonomous stuff
         Actions.runBlocking(
-                drive.actionBuilder(new Pose2d(-60, 8.5, Math.toRadians(90)))
+                drive.actionBuilder(new Pose2d(8.5, -60, Math.toRadians(90)))
                         // Step 1
-                        .strafeTo(new Vector2d(-40, 11))// -40,11
+                        .strafeTo(new Vector2d(11, -40))// 11,-40
                         .waitSeconds(1) // placeholder
-                        .strafeToLinearHeading(new Vector2d(-10, 46), Math.toRadians(270))// -10,46
-                        .strafeTo(new Vector2d(-55, 46))// -55,46
-                        .strafeTo(new Vector2d(-10, 46))// -10,46
-                        .strafeTo(new Vector2d(-10, 57))// -10,57
-                        .strafeTo(new Vector2d(-55, 57))// -55,57
-                        .strafeTo(new Vector2d(-10, 47))// -10,57
-                        .strafeTo(new Vector2d(-10, 62))// -10,62
-                        .strafeTo(new Vector2d(-55, 62))// -55,62
-                        .strafeTo(new Vector2d(-35, 62))// -35,62
-                        .strafeTo(new Vector2d(-35, 47))// -35,47
-                        .strafeTo(new Vector2d(-55, 47))// -55,47
+                        .strafeToLinearHeading(new Vector2d(50, -10), Math.toRadians(270))// 46,-10
+                        .strafeTo(new Vector2d(46, -55))//
+                        .strafeTo(new Vector2d(46, -10))// 46,-10
+                        .strafeTo(new Vector2d(57, -10))// 57,-10
+                        .strafeTo(new Vector2d(57, -55))// 57,-55
+                        .strafeTo(new Vector2d(47, -10))// 47,-10
+                        .strafeTo(new Vector2d(62, -10))// 62,-10
+                        .strafeTo(new Vector2d(62, -55))// 62,-55
+                        .strafeTo(new Vector2d(62, -35))// 62,-35
+                        .strafeTo(new Vector2d(47, -35))// 47,-35
+                        .strafeTo(new Vector2d(47, -55))// 47,-55
 
                         // Step 2
                         .waitSeconds(1) // placeholder
-                        .strafeToLinearHeading(new Vector2d(-35, 9), Math.toRadians(90))// -35, 9
+                        .strafeToLinearHeading(new Vector2d(9, -35), Math.toRadians(90))// 9,-35
                         .waitSeconds(1) //placeholder, hangs second specimen
-                        .strafeToLinearHeading(new Vector2d(-55, 45), Math.toRadians(270))// -55,45
+                        .strafeToLinearHeading(new Vector2d(45, -55), Math.toRadians(270))// 45,-55
                         .waitSeconds(1) //placeholder, grabs specimen from human player
-                        .strafeToLinearHeading(new Vector2d(-35, 7), Math.toRadians(90))// -35,7
+                        .strafeToLinearHeading(new Vector2d(7, -35), Math.toRadians(90))// 7,-35
                         .waitSeconds(1) //placeholder, hangs third specimen
-                        .strafeToLinearHeading(new Vector2d(-55, 45), Math.toRadians(270))// -55,45
+                        .strafeToLinearHeading(new Vector2d(45, -55), Math.toRadians(270))// 45,-55
                         .waitSeconds(1) //placeholder, grabs specimen from human player
-                        .strafeToLinearHeading(new Vector2d(-35, 5), Math.toRadians(90))// -35,5
+                        .strafeToLinearHeading(new Vector2d(5, -35), Math.toRadians(90))// 5,-35
                         .waitSeconds(1) //placeholder, hangs fourth specimen
                         .build()
 
         );
+
 
 
     }
