@@ -1,6 +1,6 @@
 # Converting between MeepMeepTesting and Roadrunner
 
- * Take coordinates from MeepMeepTesting to Roadrunner (x,y) ==> (y,x)
+ * Take coordinates from MeepMeepTesting to Roadrunner (x,y)
 
 Actions conversions (for 90 degrees only):
  .forward(f) ==> .strafeTo(new Vector2d(x + f, y))

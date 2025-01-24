@@ -71,6 +71,7 @@ public class RedAllianceRight extends LinearOpMode {
                         .waitSeconds(1) //placeholder, grabs specimen from human player
                         .strafeToLinearHeading(new Vector2d(5, -35), Math.toRadians(90))// 5,-35
                         .waitSeconds(1) //placeh  older, hangs fourth specimen
+                        .stopAndAdd(new motaction(mot6,mot7,10))
                         .build()
 
         );
@@ -80,7 +81,7 @@ public class RedAllianceRight extends LinearOpMode {
     }
 
 
-    public class motaction implements Action{ ;
+    public class motaction implements Action{ ; //Runs the motors 6 and 7, lifts vipslide up
         DcMotor mot2;
         DcMotor mot;
         int position;
