@@ -18,30 +18,33 @@ public class RedAllianceRight {
                 .setConstraints(60, 60, Math.toRadians(180), Math.toRadians(180), 15)
                 .followTrajectorySequence(drive -> drive.trajectorySequenceBuilder(new Pose2d(8.5, -60, Math.toRadians(90)))
                         // Step 1: Hang first specimen and get specimens to build area
-                        .lineTo(new Vector2d(11,-40)) // (11,-40)
-                        .waitSeconds(1) // placeholder, going to be when the robot is hanging specimen
-                        .lineToLinearHeading(new Pose2d(46, -10, Math.toRadians(270))) // (46,-10)
-                        .forward(45) // (46,-55)
-                        .back(45) // (46,-10)
-                        .strafeLeft(11) // (57,-10)
-                        .forward(45) // (57,-55)
-                        .back(45) // (57,-10)
-                        .strafeLeft(5) // (62,-10)
-                        .forward(45) // (62,-55)
-                        .back(20)  // (62,-35)
-                        .strafeRight(15) //(47,-35)
-                        .forward(20) // (47,-55)
-                        // Step 2: hangs 3 specimens
-                        .waitSeconds(1) //placeholder, going to be when robot is getting specimen from human player
-                        .lineToLinearHeading(new Pose2d(11, -35, Math.toRadians(90))) // (9,-35)
+                        .lineTo(new Vector2d(11, -40)) // (11,-40)
+                        .waitSeconds(1) //placeholder, hangs first specimen
+                        .lineToLinearHeading(new Pose2d(35, -35, Math.toRadians(270))) // (35,-35)
+                        .back(25) // (35,-10)
+                        .strafeLeft(10)// (45,-10)
+                        .forward(40) // (45,-50)
+                        .back(40) //(45,-10)
+                        .strafeLeft(10)// (55,-10)
+                        .forward(40) // (55,-50)
+                        .back(40) //(55,-10)
+                        .strafeLeft(6)//(61,-10)
+                        .forward(40) // (61,-50)
+                        .back(10) // (61,-40)
+                        .strafeRight(10) // (51,-40)
+                        .forward(15) // (51,-55)
+
+                       // Step 2: hangs 3 specimens
+                         .waitSeconds(1) //placeholder, going to be when robot is getting specimen from human player
+                        .lineToLinearHeading(new Pose2d(9, -35, Math.toRadians(90))) // (9,-35)
                         .waitSeconds(1) //placeholder, hangs second specimen
-                        .lineToLinearHeading(new Pose2d(45, -55, Math.toRadians(270))) // (45,-55)
+                        .lineToLinearHeading(new Pose2d(51, -55, Math.toRadians(270))) // (51,-55)
                         .waitSeconds(1) //placeholder, grabs specimen from human player
-                        .lineToLinearHeading(new Pose2d(9, -35, Math.toRadians(90))) // (7,-35)
+                        .lineToLinearHeading(new Pose2d(7, -35, Math.toRadians(90))) // (7,-35)
                         .waitSeconds(1) //placeholder, hangs third specimen
-                        .lineToLinearHeading(new Pose2d(45, -55, Math.toRadians(270))) // (45,-55)
+                        .lineToLinearHeading(new Pose2d(51, -55, Math.toRadians(270))) // (51,-55)
                         .waitSeconds(1) //placeholder, grabs specimen from human player
-                        .lineToLinearHeading(new Pose2d(7, -35, Math.toRadians(90))) // (5,-35)
+                        .lineToLinearHeading(new Pose2d(5, -35, Math.toRadians(90))) // (5,-35)
                         .waitSeconds(1) //placeholder, hangs fourth specimen
                         .build());
 

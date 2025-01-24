@@ -45,30 +45,32 @@ public class RedAllianceRight extends LinearOpMode {
                         // Step 1
                         .strafeTo(new Vector2d(11, -40))// 11,-40
                         .waitSeconds(1) // placeholder
-                        .strafeToLinearHeading(new Vector2d(50, -10), Math.toRadians(270))// 46,-10
-                        .strafeTo(new Vector2d(46, -55))//
-                        .strafeTo(new Vector2d(46, -10))// 46,-10
-                        .strafeTo(new Vector2d(57, -10))// 57,-10
-                        .strafeTo(new Vector2d(57, -55))// 57,-55
-                        .strafeTo(new Vector2d(47, -10))// 47,-10
-                        .strafeTo(new Vector2d(62, -10))// 62,-10
-                        .strafeTo(new Vector2d(62, -55))// 62,-55
-                        .strafeTo(new Vector2d(62, -35))// 62,-35
-                        .strafeTo(new Vector2d(47, -35))// 47,-35
-                        .strafeTo(new Vector2d(47, -55))// 47,-55
+                        .strafeToLinearHeading(new Vector2d(35, -35), Math.toRadians(270))// 35,-35
+                        .strafeTo(new Vector2d(35, -10))//35,-10
+                        .strafeTo(new Vector2d(45, -10))// 45,-10
+                        .strafeTo(new Vector2d(45, -50))// 45,-50
+                        .strafeTo(new Vector2d(45, -10))// 45,-10
+                        .strafeTo(new Vector2d(55, -10))// 55,-10
+                        .strafeTo(new Vector2d(55, -10))// 55,-10
+                        .strafeTo(new Vector2d(55, -50))// 55,-50
+                        .strafeTo(new Vector2d(55, -10))// 55,-10
+                        .strafeTo(new Vector2d(61, -50))// 61,-50
+                        .strafeTo(new Vector2d(61, -40))// 61,-40
+                        .strafeTo(new Vector2d(51, -40))// 51,-40
+                        .strafeTo(new Vector2d(51, -55))// 51,-55
 
                         // Step 2
                         .waitSeconds(1) // placeholder
                         .strafeToLinearHeading(new Vector2d(9, -35), Math.toRadians(90))// 9,-35
                         .waitSeconds(1) //placeholder, hangs second specimen
-                        .strafeToLinearHeading(new Vector2d(45, -55), Math.toRadians(270))// 45,-55
+                        .strafeToLinearHeading(new Vector2d(51, -55), Math.toRadians(270))// 51,-55
                         .waitSeconds(1) //placeholder, grabs specimen from human player
                         .strafeToLinearHeading(new Vector2d(7, -35), Math.toRadians(90))// 7,-35
                         .waitSeconds(1) //placeholder, hangs third specimen
-                        .strafeToLinearHeading(new Vector2d(45, -55), Math.toRadians(270))// 45,-55
+                        .strafeToLinearHeading(new Vector2d(51, -55), Math.toRadians(270))// 51,-55
                         .waitSeconds(1) //placeholder, grabs specimen from human player
                         .strafeToLinearHeading(new Vector2d(5, -35), Math.toRadians(90))// 5,-35
-                        .waitSeconds(1) //placeholder, hangs fourth specimen
+                        .waitSeconds(1) //placeh  older, hangs fourth specimen
                         .build()
 
         );

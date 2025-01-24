@@ -240,7 +240,7 @@ public class SampleTeleop extends LinearOpMode {
 
             }
             if (gamepad2.right_bumper) {
-                if (claw.getPosition() < .7) {
+                if (claw.getPosition() < 0.2) {// limits how much  claw can close
                     claw.setPosition(claw.getPosition());
                 } else {
                     claw.setPosition(claw.getPosition() - .02);
