@@ -14,7 +14,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-@Autonomous(name="AUTOBOTS roll out")
+@Autonomous(name="AUTOBOTS roll out(yellow)", group="Testing")
 public class yellow extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {

@@ -162,14 +162,14 @@ public class SampleTeleop extends LinearOpMode {
                 mot6.setPower(0);
                 mot7.setPower(0);
             } else if (mot6.getCurrentPosition() > pos - 10 && mot6.getCurrentPosition() < pos + 10) {
-                mot6.setPower(.1);
+                mot6.setPower(.2);
             } else if (mot6.getCurrentPosition() > pos - 50 && mot6.getCurrentPosition() < pos + 50) {
-                mot6.setPower(.1);
-            } else if (mot6.getCurrentPosition() > pos - 100 && mot6.getCurrentPosition() < pos + 100) {
+                mot6.setPower(1);
+            } /*else if (mot6.getCurrentPosition() > pos - 100 && mot6.getCurrentPosition() < pos + 100) {
                 mot6.setPower(.2);
             } else if (mot6.getCurrentPosition() > pos - 200 && mot6.getCurrentPosition() < pos + 200) {
-                mot6.setPower(.5);
-            } else {
+                mot6.setPower(.5);*/
+             else {
                 mot6.setPower(1);
             }
 
